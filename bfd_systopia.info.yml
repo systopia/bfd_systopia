@@ -6,7 +6,7 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 base theme: bootstrap_for_drupal
 libraries:
-  - bootstrap_for_drupal_subtheme/global-styling
+  - bfd_systopia/global-styling
 libraries-override:
   bootstrap_for_drupal/global-styling:
     css:
