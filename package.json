@@ -1,0 +1,26 @@
+{
+  "name": "bfd_systopia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "bootstrap": "4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/systopia/bfd_systopia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/systopia/bfd_systopia/issues"
+  },
+  "homepage": "https://github.com/systopia/bfd_systopia#readme"
+}
