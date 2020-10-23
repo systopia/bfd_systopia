@@ -7,7 +7,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-dart-sass": "^1.0.2",
-    "bootstrap": "4.1"
+    "bootstrap": "4.5.3"
   },
   "devDependencies": {},
   "scripts": {
