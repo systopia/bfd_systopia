@@ -17498,3 +17498,6 @@ h6 a:before {
 /* body {
   background: red !important;
 }*/
+.js .dropbutton-widget {
+  display: inline-block;
+}
