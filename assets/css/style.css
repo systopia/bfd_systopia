@@ -17498,6 +17498,10 @@ h6 a:before {
 /* body {
   background: red !important;
 }*/
+.custom-radio label {
+  margin-left: 1.5rem;
+}
+
 .js .dropbutton-widget {
   display: inline-block;
 }
