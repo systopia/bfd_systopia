@@ -1,3 +1,16 @@
 .custom-radio label {
   margin-left: 1.5rem;
 }
+.form-required::after {
+  content: none;
+}
+.required-mark::after {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  content: "";
+  vertical-align: super;
+  background-image: url(/core/misc/icons/ee0000/required.svg);
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
+}
