@@ -17517,6 +17517,15 @@ h6 a:before {
   background-size: 6px 6px;
 }
 
+.form-item.error .custom-radio .custom-control-label:before,
+.form-item.error .custom-checkbox .custom-control-label:before {
+  border-color: #dc3545;
+}
+.form-item.error .custom-radio .custom-control-input:checked ~ .custom-control-label:before,
+.form-item.error .custom-checkbox .custom-control-input:checked ~ .custom-control-label:before {
+  background-color: #dc3545;
+}
+
 .js .dropbutton-widget {
   display: inline-block;
 }

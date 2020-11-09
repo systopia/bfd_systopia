@@ -14,3 +14,15 @@
   background-repeat: no-repeat;
   background-size: 6px 6px;
 }
+
+.form-item.error {
+  .custom-radio,
+  .custom-checkbox {
+    .custom-control-label:before {
+      border-color: theme-color("danger");
+    }
+    .custom-control-input:checked ~ .custom-control-label:before {
+      background-color: theme-color("danger");
+    }
+  }
+}
