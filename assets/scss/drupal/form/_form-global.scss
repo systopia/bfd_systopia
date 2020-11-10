@@ -2,7 +2,8 @@
   margin-left: 1.5rem;
 }
 .form-required::after {
-  content: none;
+  background-image: none;
+  margin: 0;
 }
 .required-mark::after {
   display: inline-block;

@@ -17503,7 +17503,8 @@ h6 a:before {
 }
 
 .form-required::after {
-  content: none;
+  background-image: none;
+  margin: 0;
 }
 
 .required-mark::after {
