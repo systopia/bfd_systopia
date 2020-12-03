@@ -17530,3 +17530,44 @@ h6 a:before {
 .js .dropbutton-widget {
   display: inline-block;
 }
+
+.form-item.odd, .form-item.even,
+.form-wrapper.odd,
+.form-wrapper.even {
+  padding: 1rem;
+}
+.form-item.odd ~ .form-item.odd, .form-item.odd ~ .form-item.even,
+.form-item.odd ~ .form-wrapper.odd,
+.form-item.odd ~ .form-wrapper.even, .form-item.even ~ .form-item.odd, .form-item.even ~ .form-item.even,
+.form-item.even ~ .form-wrapper.odd,
+.form-item.even ~ .form-wrapper.even,
+.form-wrapper.odd ~ .form-item.odd,
+.form-wrapper.odd ~ .form-item.even,
+.form-wrapper.odd ~ .form-wrapper.odd,
+.form-wrapper.odd ~ .form-wrapper.even,
+.form-wrapper.even ~ .form-item.odd,
+.form-wrapper.even ~ .form-item.even,
+.form-wrapper.even ~ .form-wrapper.odd,
+.form-wrapper.even ~ .form-wrapper.even {
+  border-top: 1px solid #adb5bd;
+}
+.form-item.odd .form-wrapper,
+.form-item.odd .form-item, .form-item.even .form-wrapper,
+.form-item.even .form-item,
+.form-wrapper.odd .form-wrapper,
+.form-wrapper.odd .form-item,
+.form-wrapper.even .form-wrapper,
+.form-wrapper.even .form-item {
+  padding: 0;
+  border: none;
+}
+.form-item.odd,
+.form-wrapper.odd {
+  background-color: #f8f9fa;
+}
+.form-item.even .form-wrapper.odd,
+.form-item.even .form-item.odd,
+.form-wrapper.even .form-wrapper.odd,
+.form-wrapper.even .form-item.odd {
+  background: none;
+}
