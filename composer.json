@@ -11,6 +11,6 @@
     ],
     "homepage": "https://github.com/systopia/bfd_systopia",
     "require": {
-        "drupal/bfd": "^8.x-2.54"
+        "drupal/bfd": "^2.54"
     }
 }
