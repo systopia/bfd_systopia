@@ -1,3 +1,5 @@
 node_modules/*
 !node_modules/bfd_systopia_env_example
 package-lock.json
+
+/vendor/
