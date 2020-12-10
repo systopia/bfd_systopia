@@ -4,3 +4,12 @@
  * @file
  * Functions to support theming in the Bootstrap for Drupal subtheme.
  */
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function bfd_systopia_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form_element__type__' . $variables['element']['#type'];
+
+  return $suggestions;
+}

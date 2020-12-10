@@ -64,3 +64,22 @@
     }
   }
 }
+
+.form-item.form-type-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  > label {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 40%;
+    flex: 1 0 40%;
+  }
+  > .field-value {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 60%;
+    flex: 1 0 60%;
+    border-bottom: $border-width solid $border-color;
+    padding: .5rem;
+  }
+}
