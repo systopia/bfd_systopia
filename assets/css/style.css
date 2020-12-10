@@ -17535,6 +17535,9 @@ h6 a:before {
 .form-wrapper.odd,
 .form-wrapper.even {
   padding: 1rem;
+  margin: 0;
+  border-top: 1px solid #adb5bd;
+  border-bottom: 1px solid #adb5bd;
 }
 .form-item.odd ~ .form-item.odd, .form-item.odd ~ .form-item.even,
 .form-item.odd ~ .form-wrapper.odd,
@@ -17549,7 +17552,7 @@ h6 a:before {
 .form-wrapper.even ~ .form-item.even,
 .form-wrapper.even ~ .form-wrapper.odd,
 .form-wrapper.even ~ .form-wrapper.even {
-  border-top: 1px solid #adb5bd;
+  margin-top: -1px;
 }
 .form-item.odd .form-wrapper,
 .form-item.odd .form-item, .form-item.even .form-wrapper,

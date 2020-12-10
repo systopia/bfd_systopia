@@ -14,12 +14,15 @@
   &.odd,
   &.even {
     padding: 1rem;
+    margin: 0;
+    border-top: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color;
 
     ~ .form-item,
     ~ .form-wrapper {
       &.odd,
       &.even {
-        border-top: $border-width solid $border-color;
+        margin-top: -$border-width;
       }
     }
 
