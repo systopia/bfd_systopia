@@ -17527,10 +17527,6 @@ h6 a:before {
   background-color: #dc3545;
 }
 
-.js .dropbutton-widget {
-  display: inline-block;
-}
-
 .form-item.odd, .form-item.even,
 .form-wrapper.odd,
 .form-wrapper.even {
@@ -17573,4 +17569,23 @@ h6 a:before {
 .form-wrapper.even .form-wrapper.odd,
 .form-wrapper.even .form-item.odd {
   background: none;
+}
+
+.js .dropbutton-widget {
+  display: inline-block;
+}
+
+form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper > .description {
+  order: -1;
+}
+form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] legend {
+  display: block;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }

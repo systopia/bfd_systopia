@@ -9,39 +9,5 @@
 // DRUPAL
 @import "../drupal/drupal";
 
-.form-item,
-.form-wrapper {
-  &.odd,
-  &.even {
-    padding: 1rem;
-    margin: 0;
-    border-top: $border-width solid $border-color;
-    border-bottom: $border-width solid $border-color;
-
-    ~ .form-item,
-    ~ .form-wrapper {
-      &.odd,
-      &.even {
-        margin-top: -$border-width;
-      }
-    }
-
-    .form-wrapper,
-    .form-item {
-      padding: 0;
-      border: none;
-    }
-  }
-
-  &.odd {
-    background-color: $table-accent-bg;
-  }
-  &.even {
-    .form-wrapper,
-    .form-item {
-      &.odd {
-        background: none;
-      }
-    }
-  }
-}
+// CiviRemote module.
+@import "civiremote";
