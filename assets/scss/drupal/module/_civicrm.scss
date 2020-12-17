@@ -17,7 +17,8 @@
   //////////////////////////////////////////////////////////////////////////////
   // [ STICKY TOP NAVBAR VISIBILITY ]
 
-  .toolbar-horizontal.toolbar-tray-open.crm-menubar-over-cms-menu header.sticky-top {
+  .toolbar-horizontal.toolbar-tray-open.crm-menubar-visible.crm-menubar-over-cms-menu header.sticky-top
+  .toolbar-vertical.crm-menubar-visible header.sticky-top{
     top: 39px;
   }
 }
