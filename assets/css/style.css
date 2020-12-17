@@ -17587,6 +17587,19 @@ h6 a:before {
   display: inline-block;
 }
 
+/* ---------------------------------------------------------------------------*/
+/* MOBILE FIRST - drupal/module/_civicrm.scss                                 */
+/* ---------------------------------------------------------------------------*/
+#civicrm-menu-nav,
+#civicrm-menu {
+  z-index: 1020;
+}
+
+@media (min-width: 768px) {
+  .crm-menubar-over-cms-menu header.sticky-top {
+    top: 39px;
+  }
+}
 form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper {
   display: flex;
   flex-direction: column;

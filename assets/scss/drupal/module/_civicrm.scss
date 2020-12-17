@@ -1,0 +1,23 @@
+/* ---------------------------------------------------------------------------*/
+/* MOBILE FIRST - drupal/module/_civicrm.scss                                 */
+/* ---------------------------------------------------------------------------*/
+@charset "UTF-8";
+
+////////////////////////////////////////////////////// BREAKPOINT EXTRA SMALL UP
+@include media-breakpoint-up(xs) {
+  //////////////////////////////////////////////////////////////////////////////
+  // [ Z-INDEX ]
+  #civicrm-menu-nav,
+  #civicrm-menu {
+    z-index: 1020;
+  }
+}
+/////////////////////////////////////////////////////////// BREAKPOINT MEDIUM UP
+@include media-breakpoint-up(md) {
+  //////////////////////////////////////////////////////////////////////////////
+  // [ STICKY TOP NAVBAR VISIBILITY ]
+
+  .crm-menubar-over-cms-menu header.sticky-top {
+    top: 39px;
+  }
+}
