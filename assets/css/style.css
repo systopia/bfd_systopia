@@ -17592,7 +17592,7 @@ h6 a:before {
 /* ---------------------------------------------------------------------------*/
 #civicrm-menu-nav,
 #civicrm-menu {
-  z-index: 1020;
+  z-index: 1020 !important;
 }
 
 @media (min-width: 768px) {
