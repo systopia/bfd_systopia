@@ -18,6 +18,8 @@ libraries-override:
 
 regions:
   header_special: 'Header - special'
+  header_branding: 'Header - branding'
+  header_branding_mobile: 'Header - branding mobile'
   nav_main: 'Navigation - Main'
   nav_add: 'Navigation - Additional '
   content_before: 'Content - before'
