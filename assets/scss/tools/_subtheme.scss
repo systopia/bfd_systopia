@@ -3,6 +3,10 @@
 /* ---------------------------------------------------------------------------*/
 @charset "UTF-8";
 
+// MIXINS
+// Importing again for sub theme inheritance.
+@import "../tools/mixins";
+
 // BASE
 @import "../base/base";
 
