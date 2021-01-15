@@ -25,3 +25,9 @@ form.civiremote-event-register-form {
     }
   }
 }
+
+.civiremote-event-session-info {
+  @include table;
+  @include table-bordered;
+  @include table-striped;
+}

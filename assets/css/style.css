@@ -17615,3 +17615,34 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
   font-size: 1.5rem;
   font-weight: 300;
 }
+
+.civiremote-event-session-info {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #90a0b0;
+  border: 1px solid #ced4da;
+}
+.civiremote-event-session-info th,
+.civiremote-event-session-info td {
+  padding: 0.65rem;
+  vertical-align: top;
+  border-top: 1px solid #ced4da;
+}
+.civiremote-event-session-info thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ced4da;
+}
+.civiremote-event-session-info tbody + tbody {
+  border-top: 2px solid #ced4da;
+}
+.civiremote-event-session-info th,
+.civiremote-event-session-info td {
+  border: 1px solid #ced4da;
+}
+.civiremote-event-session-info thead th,
+.civiremote-event-session-info thead td {
+  border-bottom-width: 2px;
+}
+.civiremote-event-session-info tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
