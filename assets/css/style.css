@@ -17570,6 +17570,10 @@ h6 a:before {
 .form-wrapper.even .form-item.odd {
   background: none;
 }
+.form-item .details-wrapper,
+.form-wrapper .details-wrapper {
+  padding: 0.5em;
+}
 
 .form-item.form-type-item {
   display: flex;
