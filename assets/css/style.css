@@ -17575,6 +17575,11 @@ h6 a:before {
   padding: 0.5em;
 }
 
+.form-composite > legend,
+.label {
+  font-weight: inherit;
+}
+
 .form-item.form-type-item {
   display: flex;
 }

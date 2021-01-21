@@ -69,6 +69,11 @@
   }
 }
 
+.form-composite > legend,
+.label {
+  font-weight: inherit;
+}
+
 .form-item.form-type-item {
   display: -webkit-box;
   display: -ms-flexbox;
