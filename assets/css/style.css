@@ -17503,6 +17503,10 @@ img {
 /* body {
   background: red !important;
 }*/
+.region-header-branding-mobile {
+  flex-basis: 100%;
+}
+
 .custom-radio label {
   margin-left: 1.5rem;
 }
