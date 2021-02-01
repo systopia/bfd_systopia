@@ -3,6 +3,11 @@
 /* ---------------------------------------------------------------------------*/
 @charset "UTF-8";
 
+img {
+  width: auto;
+  height: auto;
+}
+
 ////////////////////////////////////////////////////// BREAKPOINT EXTRA SMALL UP
 @include media-breakpoint-up(xs) {
   /* body {
