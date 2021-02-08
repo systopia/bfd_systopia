@@ -17601,6 +17601,15 @@ img {
   padding: 0.5rem;
 }
 
+.form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.form--inline .form-item {
+  float: none;
+}
+
 .js .dropbutton-widget {
   display: inline-block;
 }

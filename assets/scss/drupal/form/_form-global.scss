@@ -92,3 +92,13 @@
     padding: .5rem;
   }
 }
+
+.form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  .form-item {
+    float: none;
+  }
+}
