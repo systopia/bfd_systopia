@@ -17507,6 +17507,82 @@ img {
   flex-basis: 100%;
 }
 
+/* ---------------------------------------------------------------------------*/
+/* MOBILE FIRST - drupal/module/_civicrm.scss                                 */
+/* ---------------------------------------------------------------------------*/
+#civicrm-menu-nav,
+#civicrm-menu {
+  z-index: 1020 !important;
+}
+
+@media (min-width: 768px) {
+  .toolbar-horizontal.toolbar-tray-open.crm-menubar-visible.crm-menubar-over-cms-menu header.sticky-top,
+.toolbar-vertical.crm-menubar-visible header.sticky-top {
+    top: 39px;
+  }
+}
+form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper > .description {
+  order: -1;
+}
+form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] legend {
+  display: block;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.civiremote-event-session-info {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #90a0b0;
+  border: 1px solid #ced4da;
+}
+.civiremote-event-session-info th,
+.civiremote-event-session-info td {
+  padding: 0.65rem;
+  vertical-align: top;
+  border-top: 1px solid #ced4da;
+}
+.civiremote-event-session-info thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ced4da;
+}
+.civiremote-event-session-info tbody + tbody {
+  border-top: 2px solid #ced4da;
+}
+.civiremote-event-session-info th,
+.civiremote-event-session-info td {
+  border: 1px solid #ced4da;
+}
+.civiremote-event-session-info thead th,
+.civiremote-event-session-info thead td {
+  border-bottom-width: 2px;
+}
+.civiremote-event-session-info tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+.layout--twocol-section > .layout__region,
+.layout--threecol-section > .layout__region,
+.layout--fourcol-section > .layout__region {
+  padding: 0 0.5rem;
+}
+.layout--twocol-section > .layout__region:first-child,
+.layout--threecol-section > .layout__region:first-child,
+.layout--fourcol-section > .layout__region:first-child {
+  padding-left: 0;
+}
+.layout--twocol-section > .layout__region:last-child,
+.layout--threecol-section > .layout__region:last-child,
+.layout--fourcol-section > .layout__region:last-child {
+  padding-right: 0;
+}
+
 .custom-radio label {
   margin-left: 1.5rem;
 }
@@ -17612,64 +17688,4 @@ img {
 
 .js .dropbutton-widget {
   display: inline-block;
-}
-
-/* ---------------------------------------------------------------------------*/
-/* MOBILE FIRST - drupal/module/_civicrm.scss                                 */
-/* ---------------------------------------------------------------------------*/
-#civicrm-menu-nav,
-#civicrm-menu {
-  z-index: 1020 !important;
-}
-
-@media (min-width: 768px) {
-  .toolbar-horizontal.toolbar-tray-open.crm-menubar-visible.crm-menubar-over-cms-menu header.sticky-top,
-.toolbar-vertical.crm-menubar-visible header.sticky-top {
-    top: 39px;
-  }
-}
-form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] .fieldset-wrapper > .description {
-  order: -1;
-}
-form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm] legend {
-  display: block;
-  padding: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.civiremote-event-session-info {
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #90a0b0;
-  border: 1px solid #ced4da;
-}
-.civiremote-event-session-info th,
-.civiremote-event-session-info td {
-  padding: 0.65rem;
-  vertical-align: top;
-  border-top: 1px solid #ced4da;
-}
-.civiremote-event-session-info thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #ced4da;
-}
-.civiremote-event-session-info tbody + tbody {
-  border-top: 2px solid #ced4da;
-}
-.civiremote-event-session-info th,
-.civiremote-event-session-info td {
-  border: 1px solid #ced4da;
-}
-.civiremote-event-session-info thead th,
-.civiremote-event-session-info thead td {
-  border-bottom-width: 2px;
-}
-.civiremote-event-session-info tbody tr:nth-of-type(odd) {
-  background-color: #f8f9fa;
 }

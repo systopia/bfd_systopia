@@ -1,3 +1,8 @@
+// DRUPAL MODULES
+@import 'module/civicrm';
+@import "module/civiremote";
+@import "module/layout_builder";
+
 @import "form/form-global";
 
 .js .dropbutton-widget {
