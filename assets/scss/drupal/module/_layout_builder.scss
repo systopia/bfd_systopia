@@ -1,7 +1,7 @@
 .layout--twocol-section > .layout__region,
 .layout--threecol-section > .layout__region,
 .layout--fourcol-section > .layout__region {
-  padding: 0 ($spacer / 2);
+  padding: 0 ($spacer);
 
   &:first-child {
     padding-left: 0;
