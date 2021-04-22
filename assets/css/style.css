@@ -17598,7 +17598,7 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
   height: 6px;
   content: "";
   vertical-align: super;
-  background-image: url(/core/misc/icons/ee0000/required.svg);
+  background-image: url(../../../../../../../core/misc/icons/ee0000/required.svg);
   background-repeat: no-repeat;
   background-size: 6px 6px;
 }
