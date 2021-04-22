@@ -34,5 +34,5 @@ regions:
   footer_sub_right: 'Footer sub - right box'
   modal_container: 'Modal box container'
 
-version: '1.0-beta11'
+version: '1.x-dev'
 project: 'bfd_systopia'
