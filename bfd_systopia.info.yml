@@ -34,5 +34,8 @@ regions:
   footer_sub_right: 'Footer sub - right box'
   modal_container: 'Modal box container'
 
+'interface translation project': bfd_systopia
+'interface translation server pattern': https://systopia.github.io/bfd_systopia/translations/%language.po
+
 version: '1.x-dev'
 project: 'bfd_systopia'
