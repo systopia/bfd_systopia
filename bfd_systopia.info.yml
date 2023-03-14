@@ -3,7 +3,7 @@ name: 'Bootstrap for Drupal - SYSTOPIA Sub Theme'
 type: theme
 description: 'A pragmatic Bootstrap 4 theme for Drupal 8 and Drupal 9. This theme aims to provide users with the best possible experience out of the box. It also aim to be a Bootstrap 4 base solution for developers with SCSS files provided. Created by octogone.dev. Adjusted by SYSTOPIA.de'
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 base theme: bootstrap_for_drupal
 libraries:
   - bfd_systopia/global-styling
