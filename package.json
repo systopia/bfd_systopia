@@ -10,6 +10,9 @@
     "bootstrap": "4.5.3"
   },
   "devDependencies": {},
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
