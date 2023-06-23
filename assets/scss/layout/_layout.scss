@@ -4,3 +4,79 @@
 .region-header-branding-mobile {
   flex-basis: 100%;
 }
+
+// Use the Bootstrap 5 definition for the "col-<n>" classes. In Bootstrap 4
+//"max-width" is used instead of "width". This conflicts with the "Automatic
+// width" option for columns in Views. If enabled "width" is added in the
+// "style" attribute, but the "max-width" setting overrides it.
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+  max-width: revert;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+  max-width: revert;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+  max-width: revert;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  max-width: revert;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+  max-width: revert;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: revert;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+  max-width: revert;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+  max-width: revert;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+  max-width: revert;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+  max-width: revert;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+  max-width: revert;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: revert;
+}
