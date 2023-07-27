@@ -1,0 +1,19 @@
+/*
+ * Reduce font size of legend in nested field sets. The reduction is limited to
+ * two nesting levels, so the font size doesn't become smaller than the one used
+ * for field labels.
+ */
+// 1.5rem is the font size used for legend by bootstrap.
+$legend-font-size: 1.5rem;
+
+#funding-form fieldset legend {
+  font-size: $legend-font-size;
+}
+
+#funding-form fieldset fieldset legend {
+  font-size: $legend-font-size * .9;
+}
+
+#funding-form fieldset fieldset fieldset legend {
+  font-size: $legend-font-size * .85;
+}
