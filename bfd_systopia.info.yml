@@ -37,5 +37,5 @@ regions:
 'interface translation project': bfd_systopia
 'interface translation server pattern': https://systopia.github.io/bfd_systopia/translations/%language.po
 
-version: '1.x-dev'
+version: '1.0-beta16'
 project: 'bfd_systopia'
