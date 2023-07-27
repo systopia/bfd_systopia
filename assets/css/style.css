@@ -16575,6 +16575,23 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
   background-color: #f8f9fa;
 }
 
+/*
+ * Reduce font size of legend in nested field sets. The reduction is limited to
+ * two nesting levels, so the font size doesn't become smaller than the one used
+ * for field labels.
+ */
+#funding-form fieldset legend {
+  font-size: 1.5rem;
+}
+
+#funding-form fieldset fieldset legend {
+  font-size: 1.35rem;
+}
+
+#funding-form fieldset fieldset fieldset legend {
+  font-size: 1.275rem;
+}
+
 .layout--twocol-section > .layout__region,
 .layout--threecol-section > .layout__region,
 .layout--fourcol-section > .layout__region {
