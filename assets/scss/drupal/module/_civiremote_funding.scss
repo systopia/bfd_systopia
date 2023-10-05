@@ -17,3 +17,14 @@ $legend-font-size: 1.5rem;
 #funding-form fieldset fieldset fieldset legend {
   font-size: $legend-font-size * .85;
 }
+
+#funding-form {
+  // Reduce required space. (There's still a bottom margin.)
+  .details-wrapper,
+  .fieldset-wrapper,
+  .json-forms-array-wrapper {
+    > .form-item {
+      margin-top: 0;
+    }
+  }
+}

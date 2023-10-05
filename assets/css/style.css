@@ -16592,6 +16592,12 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
   font-size: 1.275rem;
 }
 
+#funding-form .details-wrapper > .form-item,
+#funding-form .fieldset-wrapper > .form-item,
+#funding-form .json-forms-array-wrapper > .form-item {
+  margin-top: 0;
+}
+
 .layout--twocol-section > .layout__region,
 .layout--threecol-section > .layout__region,
 .layout--fourcol-section > .layout__region {
