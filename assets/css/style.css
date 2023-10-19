@@ -16598,6 +16598,10 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
   margin-top: 0;
 }
 
+form .custom-control {
+  z-index: initial;
+}
+
 .layout--twocol-section > .layout__region,
 .layout--threecol-section > .layout__region,
 .layout--fourcol-section > .layout__region {
