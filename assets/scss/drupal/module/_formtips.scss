@@ -1,0 +1,11 @@
+// Rules for module Form Tips.
+// https://www.drupal.org/project/formtips
+
+form {
+  // If z-index of .custom-control is set to a concrete number, other
+  // custom-control elements overlap the tool tip because the tool tip is inside
+  // the respective custom-control.
+  .custom-control {
+    z-index: initial;
+  }
+}
