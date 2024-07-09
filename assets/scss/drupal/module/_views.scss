@@ -1,0 +1,21 @@
+.view {
+  td .dropbutton-single .dropbutton-widget {
+    // Inherit instead of absolute to avoid the button to be partially hidden.
+    position: inherit;
+  }
+
+  // Reduce chance of secondary actions being truncated when dropbutton is in last table column.
+  .dropbutton .dropbutton-action.secondary-action > * {
+    // Allow line breaks in secondary dropbutton actions.
+    white-space: initial;
+    font-size: 90%;
+  }
+}
+
+// Don't truncate secondary actions when dropbutton is in last table row.
+#page-content {
+  overflow: initial !important;
+}
+.view .table-responsive {
+  overflow-x: initial;
+}

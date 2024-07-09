@@ -16580,22 +16580,54 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
  * two nesting levels, so the font size doesn't become smaller than the one used
  * for field labels.
  */
-#funding-form fieldset legend {
+.civiremote-funding-form fieldset legend {
   font-size: 1.5rem;
 }
-
-#funding-form fieldset fieldset legend {
+.civiremote-funding-form fieldset fieldset legend {
   font-size: 1.35rem;
 }
-
-#funding-form fieldset fieldset fieldset legend {
+.civiremote-funding-form fieldset fieldset fieldset legend {
   font-size: 1.275rem;
 }
-
-#funding-form .details-wrapper > .form-item,
-#funding-form .fieldset-wrapper > .form-item,
-#funding-form .json-forms-array-wrapper > .form-item {
+.civiremote-funding-form .details-wrapper > .form-item,
+.civiremote-funding-form .fieldset-wrapper > .form-item,
+.civiremote-funding-form .json-forms-array-wrapper > .form-item {
   margin-top: 0;
+}
+.civiremote-funding-form div, .civiremote-funding-form p {
+  font-size: 1rem;
+}
+.civiremote-funding-form input {
+  margin-top: 0;
+}
+.civiremote-funding-form .form-control, .civiremote-funding-form .form-select, .civiremote-funding-form td input.btn {
+  padding: 0.15rem 0.35rem;
+}
+.civiremote-funding-form .form-select {
+  height: auto;
+  vertical-align: inherit;
+}
+.civiremote-funding-form .table th, .civiremote-funding-form .table td {
+  padding: 0.1rem;
+}
+.civiremote-funding-form .fieldset-wrapper > .table-responsive-lg {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.civiremote-funding-form fieldset:not(.form-composite) {
+  margin-bottom: 0;
+}
+.civiremote-funding-form .form-checkboxes .form-item, .civiremote-funding-form .form-radios .form-item {
+  margin-top: 0.1em;
+  margin-bottom: 0;
+}
+.civiremote-funding-form fieldset.form-composite legend {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+}
+.civiremote-funding-form fieldset.form-composite .custom-control-label {
+  font-weight: 400;
 }
 
 form .custom-control {
@@ -16616,6 +16648,22 @@ form .custom-control {
 .layout--threecol-section > .layout__region:last-child,
 .layout--fourcol-section > .layout__region:last-child {
   padding-right: 0;
+}
+
+.view td .dropbutton-single .dropbutton-widget {
+  position: inherit;
+}
+.view .dropbutton .dropbutton-action.secondary-action > * {
+  white-space: initial;
+  font-size: 90%;
+}
+
+#page-content {
+  overflow: initial !important;
+}
+
+.view .table-responsive {
+  overflow-x: initial;
 }
 
 .custom-radio label {
