@@ -10,6 +10,13 @@
     white-space: initial;
     font-size: 90%;
   }
+
+  .view-filters .form-actions {
+    // For .form-actions:last-child it is set to 0. But For the "Apply" button
+    // in View filters to be on the same height as the input fields it has to be
+    // 30px here, too.
+    margin-bottom: 30px;
+  }
 }
 
 // Don't truncate secondary actions when dropbutton is in last table row.

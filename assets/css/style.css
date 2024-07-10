@@ -16657,6 +16657,9 @@ form .custom-control {
   white-space: initial;
   font-size: 90%;
 }
+.view .view-filters .form-actions {
+  margin-bottom: 30px;
+}
 
 #page-content {
   overflow: initial !important;
