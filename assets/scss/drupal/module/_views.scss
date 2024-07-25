@@ -21,7 +21,7 @@
 
 // Don't truncate secondary actions when dropbutton is in last table row.
 #page-content {
-  overflow: initial !important;
+  overflow: initial;
 }
 .view .table-responsive {
   overflow-x: initial;
