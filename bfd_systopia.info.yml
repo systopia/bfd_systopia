@@ -15,6 +15,7 @@ libraries-override:
         //fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap: vendor/googlefonts/Roboto/style.css
     js:
       //stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js: vendor/bootstrap/js/bootstrap.min.js
+  bootstrap_for_drupal/custom-styling: bfd_systopia/custom-styling
 
 regions:
   header_special: 'Header - special'

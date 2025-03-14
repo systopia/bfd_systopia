@@ -2,3 +2,11 @@ global-styling:
   version: 1.x
   js:
     assets/js/global.js: {}
+
+custom-styling:
+  version: 1.x
+  css:
+    theme:
+      public://bfd-custom.css: {}
+  dependencies:
+    - bootstrap_for_drupal/global-styling
