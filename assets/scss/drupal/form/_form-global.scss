@@ -102,3 +102,9 @@
     float: none;
   }
 }
+
+// Set values of .custom-file as of .custom-control
+.custom-file {
+  display: block; // Override inline-block.
+  height: unset; // In upstream it is set to $input-height, though we need space for label and input.
+}
