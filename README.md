@@ -40,13 +40,27 @@ compile SCSS but you will have to install node.js modules.
 
 #DEVELOPMENT
 
-## Gulp
+## Gulp 4
+With the theme is besides the gulp 3 gulpfile (see below) a gulpfile for gulp 4
+provided. This gulp file expects a globally available gulp command and used packages
+installted.
+
+Dependencies in sufficent versions are:
+- gulp 4
+- gulp-sass
+- gulp-autoprefixer
+
+To start gulp using the provide gulpfile_4.js run `gulp --gulpfile gulpfile_4.js`
+in the directory of bfd_systopia.
+
+
+## Gulp 3
 Use the Gulp file provided and create an environment running `npm install` which
 will use the `package.json` file. Note that Gulp 3 is incompatible with NodeJS
 version 12 and up, but Gulp 4 is incompatible with `gulp-dart-sass` version 1.
 Using NodeJS version `11.15.0` has been tested successfully.
 
-## Dependencies
+## Dependencies Gulp 3
 Using the `package.json` file, the following dependencies will be installed:
 - gulp
 - gulp-dart-sass
