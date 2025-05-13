@@ -16357,6 +16357,78 @@ img {
   flex-basis: 100%;
 }
 
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+  max-width: revert;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+  max-width: revert;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+  max-width: revert;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  max-width: revert;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+  max-width: revert;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: revert;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+  max-width: revert;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+  max-width: revert;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+  max-width: revert;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+  max-width: revert;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+  max-width: revert;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: revert;
+}
+
 /* ---------------------------------------------------------------------------*/
 /* MOBILE FIRST - drupal/module/_civicrm.scss                                 */
 /* ---------------------------------------------------------------------------*/
@@ -16417,6 +16489,65 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
   background-color: #f8f9fa;
 }
 
+/*
+ * Reduce font size of legend in nested field sets. The reduction is limited to
+ * two nesting levels, so the font size doesn't become smaller than the one used
+ * for field labels.
+ */
+.civiremote-funding-form fieldset legend {
+  font-size: 1.5rem;
+}
+.civiremote-funding-form fieldset fieldset legend {
+  font-size: 1.35rem;
+}
+.civiremote-funding-form fieldset fieldset fieldset legend {
+  font-size: 1.275rem;
+}
+.civiremote-funding-form .details-wrapper > .form-item,
+.civiremote-funding-form .fieldset-wrapper > .form-item,
+.civiremote-funding-form .json-forms-array-wrapper > .form-item {
+  margin-top: 0;
+}
+.civiremote-funding-form div, .civiremote-funding-form p {
+  font-size: 1rem;
+}
+.civiremote-funding-form input {
+  margin-top: 0;
+}
+.civiremote-funding-form .form-control, .civiremote-funding-form .form-select, .civiremote-funding-form td input.btn {
+  padding: 0.15rem 0.35rem;
+}
+.civiremote-funding-form .form-select {
+  height: auto;
+  vertical-align: inherit;
+}
+.civiremote-funding-form .table th, .civiremote-funding-form .table td {
+  padding: 0.1rem;
+}
+.civiremote-funding-form .fieldset-wrapper > .table-responsive-lg {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.civiremote-funding-form fieldset:not(.form-composite) {
+  margin-bottom: 0;
+}
+.civiremote-funding-form .form-checkboxes .form-item, .civiremote-funding-form .form-radios .form-item {
+  margin-top: 0.1em;
+  margin-bottom: 0;
+}
+.civiremote-funding-form fieldset.form-composite legend {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+}
+.civiremote-funding-form fieldset.form-composite .custom-control-label {
+  font-weight: 400;
+}
+
+form .custom-control {
+  z-index: initial;
+}
+
 .layout--twocol-section > .layout__region,
 .layout--threecol-section > .layout__region,
 .layout--fourcol-section > .layout__region {
@@ -16431,6 +16562,25 @@ form.civiremote-event-register-form .form-item[data-drupal-selector=edit-confirm
 .layout--threecol-section > .layout__region:last-child,
 .layout--fourcol-section > .layout__region:last-child {
   padding-right: 0;
+}
+
+.view td .dropbutton-single .dropbutton-widget {
+  position: inherit;
+}
+.view .dropbutton .dropbutton-action.secondary-action > * {
+  white-space: initial;
+  font-size: 90%;
+}
+.view .view-filters .form-actions {
+  margin-bottom: 30px;
+}
+
+#page-content {
+  overflow: initial;
+}
+
+.view .table-responsive {
+  overflow-x: initial;
 }
 
 .custom-radio label {
