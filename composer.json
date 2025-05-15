@@ -9,8 +9,5 @@
             "email": "info@systopia.de"
         }
     ],
-    "homepage": "https://github.com/systopia/bfd_systopia",
-    "require": {
-        "drupal/bfd": "^2.54"
-    }
+    "homepage": "https://github.com/systopia/bfd_systopia"
 }

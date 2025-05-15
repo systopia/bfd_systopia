@@ -9,14 +9,14 @@
 @import "tools/variable";
 
 // BOOTSTRAP 4
-@import "vendor/bootstrap";
+@import "bootstrap/bootstrap";
 
 // MIXINS
 @import "tools/mixins";
 
 // BASE THEME STYLE
 // You might need to change the relative path of this file if you dont put the subtheme in /sites/themes/custom and the base theme in /sites/themes/contrib.
-@import "../../../../contrib/bfd/assets/scss/tools/theme";
+@import "tools/theme";
 
 // SUBTHEME  STYLE
 @import 'tools/subtheme';
