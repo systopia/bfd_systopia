@@ -148,8 +148,8 @@ global-styling:
   version: VERSION
   css:
     theme:
-      assets/css/style.css: {}
-      vendor/googlefonts/Roboto/style.css: {}
+      assets/css/style.css: { weight: -10 }
+      vendor/googlefonts/Roboto/style.css: { weight: -10 }
   js:
     assets/js/global.js: {}
 

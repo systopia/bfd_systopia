@@ -141,8 +141,6 @@ function  bfd_systopia_form_system_theme_settings_alter(&$form, FormStateInterfa
 
   // Get bfd theme path.
   global $base_url;
-  // deprecated d10 -  $bfd_path = drupal_get_path('theme', 'bfd_systopia');
-  $bfd_path = \Drupal::service('extension.list.theme')->getPath('bootstrap_for_drupal');
   $custom_css_path = 'public://bfd-custom.css';
   $custom_css_dir = str_replace($base_url . '/', "", \Drupal::service('file_url_generator')->generateAbsoluteString($custom_css_path));
   // deprecated d10 - $custom_css_url = file_create_url($custom_css_path);

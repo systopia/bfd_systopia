@@ -1,5 +1,5 @@
 # METADATA
-name: 'A SYSTOPIA-Standalone Theme based on Bootstrap for Drupal, Classy and Stable'
+name: 'A SYSTOPIA-Standalone Theme based on and incorporating Bootstrap for Drupal, Classy and Stable'
 type: theme
 description: 'A pragmatic Bootstrap 4 theme for Drupal 8 - 10. This theme aims to provide users with
 the best possible experience out of the box. It also aim to be a Bootstrap 4 base solution for developers
@@ -425,5 +425,5 @@ regions:
 'interface translation project': bfd_systopia
 'interface translation server pattern': https://systopia.github.io/bfd_systopia/translations/%language.po
 
-version: '2.0.0-dev'
+version: '2.0.0-alpha2'
 project: 'bfd_systopia'
