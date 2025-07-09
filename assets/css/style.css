@@ -16519,6 +16519,18 @@ img {
   max-width: revert;
 }
 
+.js-form-item > .custom-control-label:first-child:before {
+  content: none;
+}
+
+.js-form-item > .custom-control-label:first-child:after {
+  content: none;
+}
+
+.form-item {
+  padding: 0;
+}
+
 /* ---------------------------------------------------------------------------*/
 /* MOBILE FIRST - drupal/module/_civicrm.scss                                 */
 /* ---------------------------------------------------------------------------*/

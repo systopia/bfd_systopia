@@ -81,3 +81,20 @@
   width: 100%;
   max-width: revert;
 }
+
+// #29572 issue boxes on login form 
+// remove box: .custom-control-label:before
+// remove box: .custom-control-label:after
+// remove padding left: .form-item 
+// the reason why these where missing is unclear
+
+.js-form-item > .custom-control-label:first-child:before {
+  content: none;
+}
+.js-form-item > .custom-control-label:first-child:after {
+  content: none;
+}
+
+.form-item {
+  padding: 0;
+}

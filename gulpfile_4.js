@@ -23,7 +23,7 @@ function scssTask(){
 
 function watchTask(){    
   watch(        
-    ['assets/scss/*.scss'],        
+    ['assets/scss/**/*.scss'],        
     parallel(scssTask)    );
 }
 
