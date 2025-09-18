@@ -6,7 +6,6 @@ the best possible experience out of the box. It also aim to be a Bootstrap 4 bas
 with SCSS files provided. Created by octogone.dev using Stable and Classy Themes as a base. <br>
 Bootstrap JS-Code is removed for security reasons. <br>
 Adjusted by SYSTOPIA.de'
-core: 8.x
 core_version_requirement: ^9 || ^10 || ^11
 base theme: false
 libraries:
