@@ -424,5 +424,5 @@ regions:
 'interface translation project': bfd_systopia
 'interface translation server pattern': https://systopia.github.io/bfd_systopia/translations/%language.po
 
-version: '2.0.0'
+version: '2.1.0-dev'
 project: 'bfd_systopia'
