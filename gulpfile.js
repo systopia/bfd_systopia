@@ -3,42 +3,28 @@
  * Provides Gulp configurations and tasks for Bootstrap for Drupal theme.
  */
 'use strict';
-const gulp = require('gulp');
-// browserSync has issues with current versions.
-// const browserSync = require('browser-sync').create();
-const sass = require('gulp-dart-sass');
+const { src, watch, series, parallel, dest } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
-// If present, require the `bfd_systopia_env` module which must define an export
-// variable called `includePaths` to use for `gul-dart-sass` (see below).
-const bfd_systopia_env = (() => {
-  try {
-    return require('bfd_systopia_env');
-  }
-  catch (e) {
-    return {};
-  }
-})();
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], () => {
-  // browserSync.init({
-  //   proxy: 'http://YOUR--DEV-URL.COM'
-  // });
 
-  gulp
-    .watch('assets/scss/**/*.scss', ['sass'])
-    /*.on('change', browserSync.reload)*/;
-});
-// Compile sass into CSS & auto-inject into browsers.
-gulp.task('sass', () =>
-  gulp
-  .src('assets/scss/style.scss')
-  .pipe(sass({
-    includePaths: bfd_systopia_env.includePaths
-  }))
-  .pipe(autoprefixer())
-  .pipe(gulp.dest('assets/css'))
-  // .pipe(browserSync.stream())
-);
+function scssTask() {
+  return src('assets/scss/style.scss')
+      //.pipe(sourcemaps.init())
+      .pipe(sass())
+      //.pipe(postcss([ autoprefixer(), cssnano() ]))
+      //.pipe(sourcemaps.write('.'))
+      .pipe(autoprefixer())
+      .pipe(dest('assets/css'));
+}
 
-gulp.task('default', ['serve']);
+function watchTask() {
+  watch(
+      ['assets/scss/**/*.scss'],
+      parallel(scssTask)
+  );
+}
+
+exports.build = parallel(scssTask);
+exports.watch = series(exports.build, watchTask);
+exports.default = exports.watch;

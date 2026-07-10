@@ -22,7 +22,7 @@ and add SCSS files to the master SCSS file
 `bfd_systopia/assets/scss/tools/_subtheme.scss`. Gulp file is provided to
 compile SCSS but you will have to install node.js modules.
 
-#ALTERNATIVE WITHOUT SUBTHEME
+# ALTERNATIVE WITHOUT SUBTHEME
 
 ## CSS
 To use a custom CSS go to the theme settings in
@@ -38,47 +38,17 @@ uncomment the line `@import 'custom/include`. **After updating the theme**
 dont forget to uncomment that line again. Gulp file is provided to
 compile SCSS but you will have to install node.js modules.
 
-#DEVELOPMENT
+# DEVELOPMENT
 
-## Gulp 4
-With the theme is besides the gulp 3 gulpfile (see below) a gulpfile for gulp 4
-provided. This gulp file expects a globally available gulp command and used packages
-installted.
-
-Dependencies in sufficent versions are:
-- gulp 4
-- gulp-sass
-- gulp-autoprefixer
-
-To start gulp using the provide gulpfile_4.js run `gulp --gulpfile gulpfile_4.js`
-in the directory of bfd_systopia.
-
-
-## Gulp 3
-Use the Gulp file provided and create an environment running `npm install` which
-will use the `package.json` file. Note that Gulp 3 is incompatible with NodeJS
-version 12 and up, but Gulp 4 is incompatible with `gulp-dart-sass` version 1.
-Using NodeJS version `11.15.0` has been tested successfully.
-
-## Dependencies Gulp 3
-Using the `package.json` file, the following dependencies will be installed:
-- gulp
-- gulp-dart-sass
-- gulp-autoprefixer
-- bootstrap
-
-A soft-dependency exists to a custom NodeJS module called `bfd_systopia_env`
-which can be used to define gulp-dart-sass `includePaths` to use for including
-base theme stylesheets, which will be necessary when you are using symlinks for
-the theme itself, since Gulp will follow them, causing not being able to find
-the base theme outside the symlinked theme folder. See the
-`node_modules/bfd_systopia_env_example` module for a sample implementation.
-
-The base theme `bfd` must reside in `themes/contrib/bfd`.
+## Gulp
+With the theme is a gulpfile provided. All required dependencies can be
+installed with `npm update`.
 
 ## Compile stylesheets
-The Gulp file provides a `default` task which runs the `serve` task, which in
-turn  runs the `sass` task. This will compile the `assets/scss/style.scss` file
-into a `assets/css/style.css` file, including Bootstrap and all base theme
-styles defined in its `assets/scss/tools/theme` partial, which has to be located
-according to the `@import` statement in `assets/scss/style.scss`.
+To compile the stylesheets run `npm run build`. This will compile the
+`assets/scss/style.scss` file into a `assets/css/style.css` file, including
+Bootstrap and all base theme styles defined in its `assets/scss/tools/theme`
+partial, which has to be located according to the `@import` statement in
+`assets/scss/style.scss`.
+
+If you want an automatic re-build when a file changes, execute `npm run watch`.
