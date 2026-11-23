@@ -31,17 +31,17 @@
     &.alert-danger:before {
       mask            : url('../icon/x-circle-fill.svg');
       mask-size       : cover;
-      background-color: $red;
+      background-color: var(--danger, #{$red});
     }
     &.alert-primary:before {
       mask            : url('../icon/info-fill.svg');
       mask-size       : cover;
-      background-color: $cyan;
+      background-color: var(--info, #{$cyan});
     }
     &.alert-warning:before {
       mask            : url('../icon/alert-circle-fill.svg');
       mask-size       : cover;
-      background-color: $yellow;
+      background-color: var(--warning, #{$yellow});
     }
     // close button
     .close {

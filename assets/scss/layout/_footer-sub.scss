@@ -60,11 +60,11 @@
     }
     // Link
     a {
-      color          : $white;
+      color          : var(--white, #{$white});
       text-decoration: none;
       transition     : $transition-base;
       &:hover {
-        color: darken($white, 15%);
+        color: var(--gray-400, #{darken($white, 15%)});
       }
     }
   }

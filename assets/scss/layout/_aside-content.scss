@@ -46,9 +46,9 @@
 #content-aside {
   div[id^="block-"],
   nav[id^="block-"] {
-    background-color: $gray-100;
+    background-color: var(--gray-100, #{$gray-100});
     padding         : 1rem;
-    border-radius   : $border-radius;
+    border-radius   : var(--border-radius, #{$border-radius});
     margin-bottom   : .75rem;
   }
   a {
@@ -74,7 +74,7 @@
   div[id*="comments-recent"] .view-empty,
   div[id*="content-recent"] .view-empty,
   div[id*="content-recent"] .views-field-changed {
-    color    : $gray-600;
+    color    : var(--gray-600, #{$gray-600});
     font-size: 80%;
   }
 
@@ -87,7 +87,7 @@
       width           : 15px;
       height          : 15px;
       display         : inline-block;
-      background-color: $gray-600;
+      background-color: var(--gray-600, #{$gray-600});
       transition      : $transition-base;
       transform       : translateY(2px);
       mask            : url('../icon/clock.svg');
@@ -101,7 +101,7 @@
   div[id*="comments-recent"],
   div[id*="content-recent"] {
     ul:not(.contextual-links) li:nth-child(n+2) {
-      border-top : 1px solid $gray-300;
+      border-top : 1px solid var(--gray-300, #{$gray-300});
       padding-top: .25rem;
       margin-top : .25rem;
     }
@@ -125,7 +125,7 @@
         width           : 20px;
         height          : 20px;
         display         : inline-block;
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
         margin-right    : .35rem;
         transform       : translateY(4px);
         transition      : $transition-base;
@@ -145,14 +145,14 @@
     h2 {
       font-size    : 1.5rem;
       position     : relative;
-      color        : $secondary;
+      color        : var(--secondary, #{$secondary});
       margin-bottom: 0;
       &:before {
         content         : '';
         width           : 20px;
         height          : 8px;
         display         : inline-block;
-        background-color: $secondary;
+        background-color: var(--secondary, #{$secondary});
         margin-left     : -1.5rem;
         margin-right    : .5rem;
         transform       : translateY(-2px);

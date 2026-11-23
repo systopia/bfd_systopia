@@ -27,7 +27,7 @@
         content         : '';
         margin-left     : .25rem;
         display         : inline-block;
-        background-color: $white;
+        background-color: var(--white, #{$white});
         width           : 30px;
         height          : 30px;
         transition      : $transition-base;
@@ -36,7 +36,7 @@
       }
       // hoover effect
       &:hover:before {
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
       }
 
       // icons
@@ -130,7 +130,7 @@
           padding      : 5px;
           min-width    : inherit;
           background   : white;
-          border-radius: $border-radius;
+          border-radius: var(--border-radius, #{$border-radius});
           border       : 0;
           margin-bottom: .5rem;
           margin-left  : -0.25rem;
@@ -211,21 +211,19 @@
         padding      : 5px;
         min-width    : inherit;
         border-radius: 0;
-        background   : $primary;
+        background   : var(--primary, #{$primary});
         margin-bottom: inherit;
         margin-left  : inherit;
         &:after {
           bottom             : 100%;
           left               : 30%;
-          border             : solid transparent;
           content            : ' ';
           height             : 0;
           width              : 0;
           position           : absolute;
           pointer-events     : none;
-          border-color       : rgba(136, 183, 213, 0);
-          border-bottom-color: $primary;
-          border-width       : 8px;
+          border             : 8px solid rgba(136, 183, 213, 0);
+          border-bottom-color: var(--primary, #{$primary});
           margin-top         : 1rem;
         }
 

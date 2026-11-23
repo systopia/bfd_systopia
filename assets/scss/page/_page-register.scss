@@ -18,7 +18,7 @@
         width           : 30px;
         height          : 30px;
         display         : inline-block;
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
         transform       : translateY(2px);
         margin-right    : .75rem;
         mask            : url('../icon/user.svg');
@@ -45,8 +45,8 @@
         top       : 0;
       }
       input + label {
-        background-color: $primary;
-        border-radius   : $border-radius;
+        background-color: var(--primary, #{$primary});
+        border-radius   : var(--border-radius, #{$border-radius});
         color           : #fff;
         display         : inline-block;
         padding         : .5rem 1rem;
@@ -55,7 +55,7 @@
 
       input + label:hover,
       input:focus + label {
-        background-color: darken($primary, 10%);
+        background-color: var(--primary-darken-10, #{darken($primary, 10%)});
       }
     }
     // fine tunning

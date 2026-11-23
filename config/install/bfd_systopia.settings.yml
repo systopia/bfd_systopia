@@ -1,0 +1,12 @@
+custom_css: false
+primary_color: '#33a1fd'
+secondary_color: '#373F51'
+body_bg: '#ffffff'
+body_color: '#6c757d'
+link_color: '#33a1fd'
+link_hover_color: ''
+border_radius: '0.2rem'
+font_family_base: ''
+font_size_base: '1rem'
+spacer: '1rem'
+custom_css_variables: ''

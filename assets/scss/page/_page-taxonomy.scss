@@ -14,7 +14,7 @@
     .views-row:nth-of-type(n+2) {
       margin-top : 2rem;
       margin-left: 0;
-      border-top : 2px solid $gray-400;
+      border-top : 2px solid var(--gray-400, #{$gray-400});
       padding-top: 1.5rem;
     }
     h1 {
@@ -27,7 +27,7 @@
         width           : 40px;
         height          : 40px;
         display         : inline-block;
-        background-color: $secondary;
+        background-color: var(--secondary, #{$secondary});
         margin-right    : 1rem;
       }
     }

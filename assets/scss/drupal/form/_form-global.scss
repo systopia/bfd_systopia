@@ -34,14 +34,14 @@
   &.even {
     padding: 1rem;
     margin: 0;
-    border-top: $border-width solid $border-color;
-    border-bottom: $border-width solid $border-color;
+    border-top: var(--border-width, #{$border-width}) solid var(--border-color, #{$border-color});
+    border-bottom: var(--border-width, #{$border-width}) solid var(--border-color, #{$border-color});
 
     ~ .form-item,
     ~ .form-wrapper {
       &.odd,
       &.even {
-        margin-top: -$border-width;
+        margin-top: calc(-1 * var(--border-width, #{$border-width}));
       }
     }
 
@@ -53,7 +53,7 @@
   }
 
   &.odd {
-    background-color: $table-accent-bg;
+    background-color: var(--table-accent-bg, #{$table-accent-bg});
   }
   &.even {
     .form-wrapper,
@@ -88,7 +88,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1 0 60%;
     flex: 1 0 60%;
-    border-bottom: $border-width solid $border-color;
+    border-bottom: var(--border-width, #{$border-width}) solid var(--border-color, #{$border-color});
     padding: .5rem;
   }
 }

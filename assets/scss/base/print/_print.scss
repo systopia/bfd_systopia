@@ -51,7 +51,7 @@
     }
     // Link
     a {
-      color          : $body-color !important;
+      color          : var(--body-color, #{$body-color}) !important;
       text-decoration: underline !important;
     }
     // write links
@@ -92,7 +92,7 @@
     }
     #comment-container .indented article {
       padding-left: 1rem !important;
-      border-left : 2px solid $gray-500;
+      border-left : 2px solid var(--gray-500, #{$gray-500});
     }
     .comment-body .links {
       display: none !important;

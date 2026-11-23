@@ -132,12 +132,98 @@ function  bfd_systopia_theme_suggestions_form_alter(array &$suggestions, array $
 }
 
 /**
+ * Implements hook_preprocess_html().
+ */
+function bfd_systopia_preprocess_html(&$variables) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $css_variables = [];
+
+  $primary = theme_get_setting('primary_color', $theme);
+  if (!empty($primary)) {
+    $css_variables[] = '--primary: ' . Html::escape($primary) . ';';
+  }
+
+  $secondary = theme_get_setting('secondary_color', $theme);
+  if (!empty($secondary)) {
+    $css_variables[] = '--secondary: ' . Html::escape($secondary) . ';';
+  }
+
+  $body_bg = theme_get_setting('body_bg', $theme);
+  if (!empty($body_bg)) {
+    $css_variables[] = '--body-bg: ' . Html::escape($body_bg) . ';';
+  }
+
+  $body_color = theme_get_setting('body_color', $theme);
+  if (!empty($body_color)) {
+    $css_variables[] = '--body-color: ' . Html::escape($body_color) . ';';
+  }
+
+  $link_color = theme_get_setting('link_color', $theme);
+  if (!empty($link_color)) {
+    $css_variables[] = '--link-color: ' . Html::escape($link_color) . ';';
+  }
+
+  $link_hover_color = theme_get_setting('link_hover_color', $theme);
+  if (!empty($link_hover_color)) {
+    $css_variables[] = '--link-hover-color: ' . Html::escape($link_hover_color) . ';';
+  }
+
+  $border_radius = theme_get_setting('border_radius', $theme);
+  if (!empty($border_radius)) {
+    $css_variables[] = '--border-radius: ' . Html::escape($border_radius) . ';';
+  }
+
+  $font_family_base = theme_get_setting('font_family_base', $theme);
+  if (!empty($font_family_base)) {
+    $css_variables[] = '--font-family-base: ' . Html::escape($font_family_base) . ';';
+  }
+
+  $font_size_base = theme_get_setting('font_size_base', $theme);
+  if (!empty($font_size_base)) {
+    $css_variables[] = '--font-size-base: ' . Html::escape($font_size_base) . ';';
+  }
+
+  $spacer = theme_get_setting('spacer', $theme);
+  if (!empty($spacer)) {
+    $css_variables[] = '--spacer: ' . Html::escape($spacer) . ';';
+  }
+
+  $custom_vars = theme_get_setting('custom_css_variables', $theme);
+  if (!empty($custom_vars)) {
+    $custom_lines = array_filter(array_map('trim', explode("\n", $custom_vars)));
+    foreach ($custom_lines as $line) {
+      if (strpos($line, '--') === 0) {
+        $css_variables[] = Html::escape($line);
+      }
+    }
+  }
+
+  if (!empty($css_variables)) {
+    $style_content = ":root {\n  " . implode("\n  ", $css_variables) . "\n}";
+    $variables['#attached']['html_head'][] = [
+      [
+        '#tag' => 'style',
+        '#value' => $style_content,
+        '#attributes' => [
+          'type' => 'text/css',
+        ],
+      ],
+      'bfd_systopia_css_variables',
+    ];
+  }
+}
+
+/**
  * Implements hook_form_system_theme_settings_alter().
  */
-function  bfd_systopia_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state, $form_id = NULL) {
+function bfd_systopia_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state, $form_id = NULL) {
   if (isset($form_id)) {
     return;
   }
+
+  $build_info = $form_state->getBuildInfo();
+  $theme = $build_info['args'][0] ?? \Drupal::theme()->getActiveTheme()->getName();
 
   // Get bfd theme path.
   global $base_url;
@@ -156,8 +242,8 @@ function  bfd_systopia_form_system_theme_settings_alter(&$form, FormStateInterfa
   $form['bfd_custom']['custom_css'] = [
     '#type' => 'checkbox',
     '#title' => t('Use "bfd-custom.css"'),
-    '#description' => t('Include bfd-custom.css file to override or add custom css code without subthememing/hacking bfd Theme.'),
-    '#default_value' => theme_get_setting('custom_css'),
+    '#description' => t('Include bfd-custom.css file to override or add custom css code without subtheming/hacking bfd Theme.'),
+    '#default_value' => theme_get_setting('custom_css', $theme),
   ];
 
   $form['bfd_custom']['bfd_custom_check'] = [
@@ -194,6 +280,107 @@ function  bfd_systopia_form_system_theme_settings_alter(&$form, FormStateInterfa
       ],
     ];
   }
+
+  // CSS Variables configuration
+  $form['bfd_css_variables'] = [
+    '#type' => 'details',
+    '#title' => t('Theme Colors & CSS Variables'),
+    '#description' => t('Configure CSS Custom Properties directly without requiring a SASS/Gulp build. These settings apply to this theme and its sub-themes.'),
+    '#open' => TRUE,
+    '#weight' => -5,
+  ];
+
+  $form['bfd_css_variables']['colors'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Brand & Theme Colors'),
+  ];
+
+  $form['bfd_css_variables']['colors']['primary_color'] = [
+    '#type' => 'color',
+    '#title' => t('Primary Color'),
+    '#description' => t('Buttons, active tabs, link underlines, icons and accents. SASS default: #33a1fd'),
+    '#default_value' => theme_get_setting('primary_color', $theme) ?: '#33a1fd',
+  ];
+
+  $form['bfd_css_variables']['colors']['secondary_color'] = [
+    '#type' => 'color',
+    '#title' => t('Secondary Color'),
+    '#description' => t('Headings, headers, dropdowns, and dark blocks. SASS default: #373F51'),
+    '#default_value' => theme_get_setting('secondary_color', $theme) ?: '#373F51',
+  ];
+
+  $form['bfd_css_variables']['colors']['body_bg'] = [
+    '#type' => 'color',
+    '#title' => t('Body Background Color'),
+    '#description' => t('Main background color. SASS default: #ffffff'),
+    '#default_value' => theme_get_setting('body_bg', $theme) ?: '#ffffff',
+  ];
+
+  $form['bfd_css_variables']['colors']['body_color'] = [
+    '#type' => 'color',
+    '#title' => t('Body Text Color'),
+    '#description' => t('Main font/text color. SASS default: #6c757d'),
+    '#default_value' => theme_get_setting('body_color', $theme) ?: '#6c757d',
+  ];
+
+  $form['bfd_css_variables']['colors']['link_color'] = [
+    '#type' => 'color',
+    '#title' => t('Link Color'),
+    '#description' => t('Hyperlink text color. SASS default: #33a1fd'),
+    '#default_value' => theme_get_setting('link_color', $theme) ?: '#33a1fd',
+  ];
+
+  $form['bfd_css_variables']['colors']['link_hover_color'] = [
+    '#type' => 'color',
+    '#title' => t('Link Hover Color'),
+    '#description' => t('Hyperlink hover color (optional - auto-derived if empty).'),
+    '#default_value' => theme_get_setting('link_hover_color', $theme) ?: '',
+  ];
+
+  $form['bfd_css_variables']['typography'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Typography & Layout'),
+  ];
+
+  $form['bfd_css_variables']['typography']['font_family_base'] = [
+    '#type' => 'textfield',
+    '#title' => t('Base Font Family'),
+    '#description' => t('Font stack (e.g. "Roboto", "Helvetica Neue", sans-serif). Leave empty to use system default.'),
+    '#default_value' => theme_get_setting('font_family_base', $theme) ?: '',
+  ];
+
+  $form['bfd_css_variables']['typography']['font_size_base'] = [
+    '#type' => 'textfield',
+    '#title' => t('Base Font Size'),
+    '#description' => t('Root body font size (e.g. 1rem, 16px). SASS default: 1rem'),
+    '#default_value' => theme_get_setting('font_size_base', $theme) ?: '1rem',
+  ];
+
+  $form['bfd_css_variables']['typography']['border_radius'] = [
+    '#type' => 'textfield',
+    '#title' => t('Border Radius'),
+    '#description' => t('Corner radius for buttons, badges, blocks, etc. (e.g. 0.2rem, 4px, 8px). SASS default: 0.2rem'),
+    '#default_value' => theme_get_setting('border_radius', $theme) ?: '0.2rem',
+  ];
+
+  $form['bfd_css_variables']['typography']['spacer'] = [
+    '#type' => 'textfield',
+    '#title' => t('Spacer Unit'),
+    '#description' => t('Base spacing unit (e.g. 1rem). SASS default: 1rem'),
+    '#default_value' => theme_get_setting('spacer', $theme) ?: '1rem',
+  ];
+
+  $form['bfd_css_variables']['advanced'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Advanced Custom Properties'),
+  ];
+
+  $form['bfd_css_variables']['advanced']['custom_css_variables'] = [
+    '#type' => 'textarea',
+    '#title' => t('Additional CSS Variables'),
+    '#description' => t('Provide additional CSS custom properties (one per line, e.g. --dark: #222222;).'),
+    '#default_value' => theme_get_setting('custom_css_variables', $theme) ?: '',
+  ];
 }
 
 /**

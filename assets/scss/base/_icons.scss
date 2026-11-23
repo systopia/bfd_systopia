@@ -7,10 +7,10 @@
   //////////////////////////////////////////////////////////////////////////////
   // [ VENDOR ]
   .bootstrap {
-    color     : $white;
+    color     : var(--white, #{$white});
     transition: $transition-base;
     &:hover:before {
-      background-color: $bootstrap;
+      background-color: var(--bootstrap, #{$bootstrap});
     }
   }
 
@@ -31,10 +31,10 @@
       mask            : url('../icon/social-media-round/facebook.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $facebook;
+      background-color: var(--facebook, #{$facebook});
     }
     &:hover:before {
-      background-color: lighten($facebook,10%);
+      background-color: var(--facebook-hover, #{lighten($facebook, 10%)});
     }
   }
   .social-media-round-messenger {
@@ -42,10 +42,10 @@
       mask            : url('../icon/social-media-round/messenger.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $messenger;
+      background-color: var(--messenger, #{$messenger});
     }
     &:hover:before {
-      background-color: lighten($messenger,10%);
+      background-color: var(--messenger-hover, #{lighten($messenger, 10%)});
     }
   }
 
@@ -54,10 +54,10 @@
       mask            : url('../icon/social-media-round/instagram.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $instagram;
+      background-color: var(--instagram, #{$instagram});
     }
     &:hover:before {
-      background-color: lighten($instagram,10%);
+      background-color: var(--instagram-hover, #{lighten($instagram, 10%)});
     }
   }
   .social-media-round-twitter {
@@ -65,10 +65,10 @@
       mask            : url('../icon/social-media-round/twitter.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $twitter;
+      background-color: var(--twitter, #{$twitter});
     }
     &:hover:before {
-      background-color: lighten($twitter,10%);
+      background-color: var(--twitter-hover, #{lighten($twitter, 10%)});
     }
   }
   .social-media-round-whatsapp {
@@ -76,10 +76,10 @@
       mask            : url('../icon/social-media-round/whatsapp.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $whatsapp;
+      background-color: var(--whatsapp, #{$whatsapp});
     }
     &:hover:before {
-      background-color: lighten($whatsapp,10%);
+      background-color: var(--whatsapp-hover, #{lighten($whatsapp, 10%)});
     }
   }
   .social-media-round-youtube {
@@ -87,10 +87,10 @@
       mask            : url('../icon/social-media-round/youtube.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $youtube;
+      background-color: var(--youtube, #{$youtube});
     }
     &:hover:before {
-      background-color: lighten($youtube,10%);
+      background-color: var(--youtube-hover, #{lighten($youtube, 10%)});
     }
   }
   .social-media-round-linkedin {
@@ -98,10 +98,10 @@
       mask            : url('../icon/social-media-round/linkedin.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $linkedin;
+      background-color: var(--linkedin, #{$linkedin});
     }
     &:hover:before {
-      background-color: lighten($linkedin,10%);
+      background-color: var(--linkedin-hover, #{lighten($linkedin, 10%)});
     }
   }
   .social-media-round-skype {
@@ -109,10 +109,10 @@
       mask            : url('../icon/social-media-round/skype.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: $skype;
+      background-color: var(--skype, #{$skype});
     }
     &:hover:before {
-      background-color: lighten($skype,10%);
+      background-color: var(--skype-hover, #{lighten($skype, 10%)});
     }
   }
   .social-media-round-snapchat {
@@ -120,10 +120,10 @@
       mask            : url('../icon/social-media-round/snapchat.svg');
       mask-size       : contain;
       mask-repeat     : no-repeat;
-      background-color: darken($snapchat,10%);
+      background-color: var(--snapchat, #{darken($snapchat, 10%)});
     }
     &:hover:before {
-      background-color: darken($snapchat,5%);
+      background-color: var(--snapchat-hover, #{darken($snapchat, 5%)});
     }
   }
 }

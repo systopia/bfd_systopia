@@ -1,0 +1,40 @@
+bfd_systopia.settings:
+  type: theme_settings
+  label: 'bfd_systopia settings'
+  mapping:
+    custom_css:
+      type: boolean
+      label: 'Use "bfd-custom.css"'
+    primary_color:
+      type: string
+      label: 'Primary Color'
+    secondary_color:
+      type: string
+      label: 'Secondary Color'
+    body_bg:
+      type: string
+      label: 'Body Background Color'
+    body_color:
+      type: string
+      label: 'Body Text Color'
+    link_color:
+      type: string
+      label: 'Link Color'
+    link_hover_color:
+      type: string
+      label: 'Link Hover Color'
+    border_radius:
+      type: string
+      label: 'Border Radius'
+    font_family_base:
+      type: string
+      label: 'Base Font Family'
+    font_size_base:
+      type: string
+      label: 'Base Font Size'
+    spacer:
+      type: string
+      label: 'Base Spacer Unit'
+    custom_css_variables:
+      type: string
+      label: 'Custom CSS Variables'

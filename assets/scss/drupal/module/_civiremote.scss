@@ -21,7 +21,7 @@ form.civiremote-event-register-form {
       padding: 0;
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
-      font-weight: $font-weight-base;
+      font-weight: var(--font-weight-base, #{$font-weight-base});
     }
   }
 }
