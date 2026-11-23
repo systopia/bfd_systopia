@@ -14,7 +14,7 @@
         width           : 30px;
         height          : 30px;
         display         : inline-block;
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
         transform       : translateY(2px);
         margin-right    : .75rem;
         mask            : url('../icon/send-1.svg');

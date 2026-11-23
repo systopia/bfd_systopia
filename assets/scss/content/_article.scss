@@ -12,11 +12,11 @@
   }
   article.node {
     &.node--unpublished {
-      background-color: #f8f9fa;
+      background-color: var(--gray-100, #f8f9fa);
       padding         : 1rem;
-      border-radius   : $border-radius;
+      border-radius   : var(--border-radius, #{$border-radius});
       .entity-moderation-form {
-        background-color: #f8f9fa;
+        background-color: var(--gray-100, #f8f9fa);
       }
     }
     // READ MORE LINK
@@ -29,13 +29,13 @@
         width           : 16px;
         height          : 16px;
         display         : inline-block;
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
         transform       : translateY(2px);
         transition      : $transition-base;
         margin-right    : .5rem;
       }
       &:hover:before {
-        background-color: darken($primary, 15%);
+        background-color: var(--primary-hover, #{darken($primary, 15%)});
       }
 
     }
@@ -43,7 +43,7 @@
     ul:not([class]) {
       padding-left: 1rem;
       li::marker {
-        color: $primary;
+        color: var(--primary, #{$primary});
       }
       ul {
         padding-left: .75rem;
@@ -54,7 +54,7 @@
       padding-left: 1rem;
       line-height : 1.75rem;
       li::marker {
-        color: $primary;
+        color: var(--primary, #{$primary});
       }
     }
     // [ MAKE ARTICLE IMAGE RESPONSIVE ]
@@ -67,7 +67,7 @@
       float        : left;
       margin-right : 15px;
       margin-top   : 8px;
-      border-radius: $border-radius;
+      border-radius: var(--border-radius, #{$border-radius});
     }
 
     // [ Drupal HP VIEW IMAGE ]
@@ -91,7 +91,7 @@
       }
       .node__submitted {
         height        : 35px;
-        color         : $gray-500;
+        color         : var(--gray-500, #{$gray-500});
         font-size     : 90%;
         display       : table-cell;
         vertical-align: middle;
@@ -128,7 +128,7 @@
           width           : 16px;
           height          : 16px;
           display         : inline-block;
-          background-color: $body-color;
+          background-color: var(--body-color, #{$body-color});
           transition      : $transition-base;
           margin-right    : .5rem;
           left            : -27px;
@@ -169,7 +169,7 @@
     ul:not([class]) {
       padding-left: 2rem;
       li::marker {
-        color: $primary;
+        color: var(--primary, #{$primary});
       }
       ul {
         padding-left: 1.4rem;
@@ -180,7 +180,7 @@
       padding-left: 2rem;
       line-height : 1.75rem;
       li::marker {
-        color: $primary;
+        color: var(--primary, #{$primary});
       }
     }
   }

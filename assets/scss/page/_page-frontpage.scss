@@ -19,7 +19,7 @@
         height          : 50px;
         content         : '';
         display         : inline-block;
-        background-color: $orange;
+        background-color: var(--warning, #{$orange});
         transform       : translateY(2px);
         transition      : $transition-base;
         position        : absolute;
@@ -29,7 +29,7 @@
 
       &:hover {
         &:after {
-          background-color: lighten($orange, 15%);
+          background-color: var(--warning, #{lighten($orange, 15%)});
         }
       }
     }
@@ -44,14 +44,14 @@
         width           : 30px;
         height          : 30px;
         display         : inline-block;
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
         transform       : translateY(2px);
         transition      : $transition-base;
         margin-right    : .25rem;
       }
       &:hover {
         &:before {
-          background-color: darken($primary, 15%);
+          background-color: var(--primary-hover, #{darken($primary, 15%)});
         }
       }
     }
@@ -96,7 +96,7 @@
     .box-hp:nth-of-type(n+3) article.node {
       padding-top: 2rem;
       margin-left: 0;
-      border-top : 1px solid $gray-400;
+      border-top : 1px solid var(--gray-400, #{$gray-400});
     }
     article .node__links li {
       font-size: 90%;

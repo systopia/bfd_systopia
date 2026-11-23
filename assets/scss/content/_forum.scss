@@ -40,7 +40,7 @@
     }
 
     thead th {
-      background-color: $secondary;
+      background-color: var(--secondary, #{$secondary});
       border          : 0;
       color           : white;
       a {
@@ -48,13 +48,13 @@
       }
     }
     thead th:first-child {
-      border-radius: $border-radius 0 0 0;
+      border-radius: var(--border-radius, #{$border-radius}) 0 0 0;
     }
     thead th:last-child {
-      border-radius: 0 $border-radius 0 0;
+      border-radius: 0 var(--border-radius, #{$border-radius}) 0 0;
     }
     tfoot tr th {
-      background-color: $secondary !important;
+      background-color: var(--secondary, #{$secondary}) !important;
       min-height      : 2.5rem;
       color           : white;
       a {
@@ -62,10 +62,10 @@
       }
     }
     tfoot tr th:first-child {
-      border-radius: 0 0 0 $border-radius;
+      border-radius: 0 0 0 var(--border-radius, #{$border-radius});
     }
     tfoot tr th:last-child {
-      border-radius: 0 0 $border-radius 0;
+      border-radius: 0 0 var(--border-radius, #{$border-radius}) 0;
     }
     .indented {
       margin-left: 1.5rem;
@@ -91,7 +91,7 @@
         text-decoration: none;
       }
       .container {
-        background-color: $gray-100;
+        background-color: var(--gray-100, #{$gray-100});
       }
     }
     //icon forums
@@ -163,14 +163,14 @@
     }
     //actions Links
     .action-links a {
-      border       : 1px solid $primary;
-      border-radius: $border-radius;
+      border       : 1px solid var(--primary, #{$primary});
+      border-radius: var(--border-radius, #{$border-radius});
     }
     //forum
     .comment-comment-forum-form {
       margin-top      : 1rem;
-      border-radius   : $border-radius;
-      background-color: $gray-100;
+      border-radius   : var(--border-radius, #{$border-radius});
+      background-color: var(--gray-100, #{$gray-100});
       padding         : 1rem;
     }
 
@@ -202,7 +202,7 @@
             width           : 16px;
             height          : 16px;
             display         : inline-block;
-            background-color: $body-color;
+            background-color: var(--body-color, #{$body-color});
             transition      : $transition-base;
             margin-right    : .5rem;
             transform       : translateY(2px);

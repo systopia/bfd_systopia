@@ -15,9 +15,9 @@
 
   footer {
     h2 {
-      color         : $white;
+      color         : var(--white, #{$white});
       font-size     : 1.5rem;
-      border-bottom : 1px dotted $white;
+      border-bottom : 1px dotted var(--white, #{$white});
       margin-bottom : 1.5rem;
       padding-bottom: .75rem;
 
@@ -38,13 +38,13 @@
           width           : 25px;
           height          : 25px;
           display         : inline-block;
-          background-color: $gray-200;
+          background-color: var(--gray-200, #{$gray-200});
           transition      : $transition-base;
           position        : absolute;
         }
         li:hover {
           &:before {
-            background-color: $primary;
+            background-color: var(--primary, #{$primary});
           }
         }
         li:nth-child(1):before {
@@ -70,7 +70,7 @@
           display        : inline-block;
           text-decoration: none;
           &:hover {
-            color: $white;
+            color: var(--white, #{$white});
           }
         }
         li {

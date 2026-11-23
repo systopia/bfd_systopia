@@ -20,21 +20,21 @@
     }
     font-size: 1rem;
     .nav-item {
-      border-top  : 1px solid $gray-600;
+      border-top  : 1px solid var(--gray-600, #{$gray-600});
       padding-left: 1rem;
     }
     // [ DROPDOWN ]
     .dropdown-menu {
-      background-color: $secondary;
+      background-color: var(--secondary, #{$secondary});
       border          : 0;
       border-radius   : 0;
       padding-left    : 1rem;
       .dropdown-item {
-        color      : $white;
+        color      : var(--white, #{$white});
         font-weight: 300;
         font-size  : 1rem;
         &:hover {
-          background-color: lighten($primary,10%);
+          background-color: var(--primary-lighten-10, #{lighten($primary, 10%)});
         }
       }
     }
@@ -152,21 +152,19 @@
     .dropdown-menu {
       margin-top      : .6rem;
       padding-left    : 0;
-      background-color: $primary;
+      background-color: var(--primary, #{$primary});
       border          : 0;
       z-index         : 2;
       &:after {
         bottom             : 100%;
         left               : 30%;
-        border             : solid transparent;
         content            : ' ';
         height             : 0;
         width              : 0;
         position           : absolute;
         pointer-events     : none;
-        border-color       : rgba(136, 183, 213, 0);
-        border-bottom-color: $primary;
-        border-width       : 8px;
+        border             : 8px solid rgba(136, 183, 213, 0);
+        border-bottom-color: var(--primary, #{$primary});
         margin-left        : -20px;
         margin-top         : 1rem;
       }
@@ -182,7 +180,7 @@
         height            : 2px;
         bottom            : 0;
         left              : 0;
-        background-color  : $primary;
+        background-color  : var(--primary, #{$primary});
         -webkit-transform : scaleX(0);
         transform         : scaleX(0);
         -webkit-transition: all .3s ease-in-out 0s;

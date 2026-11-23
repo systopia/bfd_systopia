@@ -12,22 +12,19 @@
       border    : 1px solid transparent;
     }
     li.active {
-      background-color: $primary;
-      border-color    : $primary;
-      border-radius   : $border-radius;
-      border          : 1px solid transparent;
+      background-color: var(--primary, #{$primary});
+      border-color    : var(--primary, #{$primary});
+      border-radius   : var(--border-radius, #{$border-radius});
       a {
         color: #fff;
       }
       &:hover {
-        background-color: darken($primary,10%);
+        background-color: var(--primary-darken-10, #{darken($primary, 10%)});
       }
-
     }
     li:hover {
-      border-color : $primary;
-      border-radius: $border-radius;
-      border       : 1px solid $primary;
+      border-color : var(--primary, #{$primary});
+      border-radius: var(--border-radius, #{$border-radius});
     }
   }
   .tabs a.is-active {

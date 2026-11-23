@@ -8,6 +8,15 @@ If you are using a multisites Drupal instance you have to copy the
 or change the relative path in the SCSS master file -
 `bfd_systopia/assets/scss/style.scss`.
 
+# CSS CUSTOM PROPERTIES (CSS VARIABLES)
+
+The theme uses native CSS Custom Properties with SASS fallbacks (`var(--name, #{$sass-var})`) for colors, typography, and spacing (e.g. `--primary`, `--secondary`, `--body-bg`, `--link-color`, `--border-radius`).
+
+You can customize these variables at runtime without recompiling SASS:
+- **Theme Settings:** Under `/admin/appearance/settings/bfd_systopia` in the "Theme Colors & CSS Variables" section.
+- **Custom CSS File:** In `bfd-custom.css` by overriding `:root { --primary: #...; }`.
+- **CSS Sub-theme:** In a subtheme inheriting from `bfd_systopia`.
+
 # SUBTHEME USAGE
 
 ## CSS
@@ -15,6 +24,8 @@ To use a custom CSS go to the theme settings in
 `/admin/appearance/settings/bfd_systopia` Tick "Use bfd-custom.css".
 That setting will create a "bfd-custom.css" in `files` folder that you can use
 to customize the theme.
+
+A CSS-only subtheme can also be created without requiring node.js or Gulp.
 
 ## SCSS
 You can theme directly with the file `bfd_systopia/assets/scss/base/_base.scss`

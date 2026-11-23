@@ -6,21 +6,24 @@
 
 .btn {
   display: inline-block;
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  color: $body-color;
+  font-family: var(--font-family-base, #{$font-family-base});
+  font-weight: var(--btn-font-weight, #{$btn-font-weight});
+  color: var(--body-color, #{$body-color});
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
   vertical-align: middle;
   user-select: none;
   background-color: transparent;
-  border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  border: var(--input-btn-border-width, #{$btn-border-width}) solid transparent;
+  padding: var(--input-btn-padding-y, #{$btn-padding-y}) var(--input-btn-padding-x, #{$btn-padding-x});
+  font-size: var(--input-btn-font-size, #{$btn-font-size});
+  line-height: var(--input-btn-line-height, #{$btn-line-height});
+  @include border-radius(var(--border-radius, #{$btn-border-radius}), 0);
   @include transition($btn-transition);
 
   @include hover() {
-    color: $body-color;
+    color: var(--body-color, #{$body-color});
     text-decoration: none;
   }
 
@@ -65,12 +68,75 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
+    background-color: var(--#{$color}, #{$value});
+    border-color: var(--#{$color}, #{$value});
+
+    @include hover() {
+      @if $color == "primary" {
+        background-color: var(--primary-hover, #{darken($value, 7.5%)});
+        border-color: var(--primary-hover, #{darken($value, 10%)});
+      } @else if $color == "secondary" {
+        background-color: var(--secondary-hover, #{darken($value, 7.5%)});
+        border-color: var(--secondary-hover, #{darken($value, 10%)});
+      } @else {
+        background-color: var(--#{$color}, #{darken($value, 7.5%)});
+        border-color: var(--#{$color}, #{darken($value, 10%)});
+      }
+    }
+
+    &:focus,
+    &.focus {
+      @if $color == "primary" {
+        background-color: var(--primary-hover, #{darken($value, 7.5%)});
+        border-color: var(--primary-hover, #{darken($value, 10%)});
+      } @else if $color == "secondary" {
+        background-color: var(--secondary-hover, #{darken($value, 7.5%)});
+        border-color: var(--secondary-hover, #{darken($value, 10%)});
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      background-color: var(--#{$color}, #{$value});
+      border-color: var(--#{$color}, #{$value});
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      @if $color == "primary" {
+        background-color: var(--primary-hover, #{darken($value, 10%)});
+        border-color: var(--primary-hover, #{darken($value, 12.5%)});
+      } @else if $color == "secondary" {
+        background-color: var(--secondary-hover, #{darken($value, 10%)});
+        border-color: var(--secondary-hover, #{darken($value, 12.5%)});
+      }
+    }
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
+    color: var(--#{$color}, #{$value});
+    border-color: var(--#{$color}, #{$value});
+
+    @include hover() {
+      background-color: var(--#{$color}, #{$value});
+      border-color: var(--#{$color}, #{$value});
+    }
+
+    &.disabled,
+    &:disabled {
+      color: var(--#{$color}, #{$value});
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      background-color: var(--#{$color}, #{$value});
+      border-color: var(--#{$color}, #{$value});
+    }
   }
 }
 
@@ -81,18 +147,18 @@ fieldset:disabled a.btn {
 
 // Make a button look and behave like a link
 .btn-link {
-  font-weight: $font-weight-normal;
-  color: $link-color;
-  text-decoration: $link-decoration;
+  font-weight: var(--font-weight-normal, #{$font-weight-normal});
+  color: var(--link-color, #{$link-color});
+  text-decoration: var(--link-decoration, #{$link-decoration});
 
   @include hover() {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: var(--link-hover-color, #{$link-hover-color});
+    text-decoration: var(--link-hover-decoration, #{$link-hover-decoration});
   }
 
   &:focus,
   &.focus {
-    text-decoration: $link-hover-decoration;
+    text-decoration: var(--link-hover-decoration, #{$link-hover-decoration});
   }
 
   &:disabled,

@@ -152,6 +152,8 @@ global-styling:
       vendor/googlefonts/Roboto/style.css: { weight: -10 }
   js:
     assets/js/global.js: {}
+  dependencies:
+    - core/drupal
 
 custom-styling:
   version: VERSION

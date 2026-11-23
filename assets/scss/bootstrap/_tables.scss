@@ -4,24 +4,24 @@
 
 .table {
   width: 100%;
-  margin-bottom: $spacer;
-  color: $table-color;
+  margin-bottom: var(--spacer, #{$spacer});
+  color: var(--table-color, #{$table-color});
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
   th,
   td {
-    padding: $table-cell-padding;
+    padding: var(--table-cell-padding, #{$table-cell-padding});
     vertical-align: top;
-    border-top: $table-border-width solid $table-border-color;
+    border-top: $table-border-width solid var(--table-border-color, #{$table-border-color});
   }
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-bottom: (2 * $table-border-width) solid var(--table-border-color, #{$table-border-color});
   }
 
   tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
+    border-top: (2 * $table-border-width) solid var(--table-border-color, #{$table-border-color});
   }
 }
 
@@ -73,7 +73,7 @@
 
 .table-striped {
   tbody tr:nth-of-type(#{$table-striped-order}) {
-    background-color: $table-accent-bg;
+    background-color: var(--table-accent-bg, #{$table-accent-bg});
   }
 }
 
@@ -120,9 +120,9 @@
 
   .thead-light {
     th {
-      color: $table-head-color;
-      background-color: $table-head-bg;
-      border-color: $table-border-color;
+      color: var(--table-head-color, #{$table-head-color});
+      background-color: var(--table-head-bg, #{$table-head-bg});
+      border-color: var(--table-border-color, #{$table-border-color});
     }
   }
 }

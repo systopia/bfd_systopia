@@ -10,12 +10,12 @@
   .statistics-counter {
     display  : inline-block !important;
     font-size: 90%;
-    color    : $gray-500;
+    color    : var(--gray-500, #{$gray-500});
     &:before {
       content         : '';
       margin-right    : .5rem;
       display         : inline-block;
-      background-color: $gray-500;
+      background-color: var(--gray-500, #{$gray-500});
       transform       : translateY(6px);
       width           : 25px;
       height          : 25px;

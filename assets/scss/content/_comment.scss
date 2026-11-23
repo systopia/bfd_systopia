@@ -9,10 +9,10 @@
   //////////////////////////////////////////////////////////////////////////////
   // [ GLOBAL COMMENT ]
   article.comment {
-    background-color: $gray-100;
+    background-color: var(--gray-100, #{$gray-100});
     padding         : 1rem 1.5rem .5rem;
     margin-bottom   : 1.5rem;
-    border-radius   : $border-radius;
+    border-radius   : var(--border-radius, #{$border-radius});
     .field--name-user-picture img {
       border-radius: 50% !important;
       border       : 3px solid white;
@@ -25,7 +25,7 @@
     .comment-title {
       margin-bottom: 0;
       mark {
-        border-radius: $border-radius;
+        border-radius: var(--border-radius, #{$border-radius});
         padding      : .1rem .5rem;
         font-size    : 60%;
       }
@@ -40,7 +40,7 @@
         width           : 30px;
         height          : 30px;
         display         : inline-block;
-        background-color: $primary;
+        background-color: var(--primary, #{$primary});
         transform       : translateY(5px);
         margin-right    : .5rem;
         mask            : url('../icon/comment.svg');
@@ -50,7 +50,7 @@
     }
 
     footer {
-      color    : $gray-500;
+      color    : var(--gray-500, #{$gray-500});
       font-size: 90%;
       margin   : .25rem 0;
       .comment__submitted {
@@ -78,8 +78,8 @@
       padding: 0;
     }
     margin-top      : 1rem;
-    border-radius   : $border-radius;
-    background-color: $gray-100;
+    border-radius   : var(--border-radius, #{$border-radius});
+    background-color: var(--gray-100, #{$gray-100});
     padding         : 2rem;
   }
   .comment-new-container {
@@ -150,7 +150,7 @@
         li {
           &:before {
             font-size     : 2rem;
-            color         : $primary;
+            color         : var(--primary, #{$primary});
             vertical-align: -6px;
             margin-right  : 8px;
             display       : inline-block;

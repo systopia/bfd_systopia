@@ -8,9 +8,9 @@
   // [ COMMON ]
   .path-activity {
     .marker {
-      color           : $white;
+      color           : var(--white, #{$white});
       margin-left     : .5rem;
-      background-color: lighten($red,10%);
+      background-color: var(--danger, #{lighten($red, 10%)});
       padding         : .1rem .4rem;
     }
   }
